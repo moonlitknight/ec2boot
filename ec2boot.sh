@@ -5,6 +5,9 @@
 # installed with ...
 #
 #
+
+
+
 set -x
 cd /ec2boot
 if [ -z "$1" ]
