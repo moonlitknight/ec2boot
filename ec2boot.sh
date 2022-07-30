@@ -27,7 +27,7 @@ if [ ! -f /shared/jails ]       # if shared not mounted, wait to give me time to
 then
         sleep 2
         mount /shared
-        /ec2boot.sh
+        ./ec2boot.sh -3
         exit
 fi
 # do the startup stuff
