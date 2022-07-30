@@ -13,7 +13,7 @@ cd /ec2boot
 if [ -z "$1" ]
 then
         git pull
-        /ec2boot/ec2boot.sh -2 &
+        /ec2boot/ec2boot.sh -2 
         exit
 fi
 
