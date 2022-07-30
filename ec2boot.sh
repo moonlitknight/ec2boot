@@ -30,13 +30,11 @@ if [ ! -d /shared/jails ]       # if shared not mounted, wait to give me time to
 then
         sleep 2
         mount /shared
-        ./ec2boot.sh -3
+        /ec2boot/ec2boot.sh -3
         exit
 fi
 # do the startup stuff
-echo starting docker
-systemctl start docker
-echo running the rest of the startup stuff
+echo running the rest of the startup stuff in 1 minute
 at now + 1 minutes << EOF
  PATH=$PATH:/bin:/usr/bin:/sbin:/usr/sbin
  systemctl restart docker
