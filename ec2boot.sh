@@ -25,3 +25,6 @@ fi
 echo starting docker
 
 echo running the rest of the startup stuff
+
+
+
