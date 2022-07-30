@@ -6,6 +6,15 @@
 #
 #
 set -x
+cd /ec2boot
+if [ -z "$1" ]
+then
+        git pull
+        /ec2boot/ec2boot.sh -2 &
+        exit
+fi
+
+# 2nd pass after git pull
 hostname=`hostname`
 if [ "${hostname:-:3}" == "ec2" ]
 then
