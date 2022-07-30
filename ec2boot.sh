@@ -35,7 +35,7 @@ then
 fi
 # do the startup stuff
 echo starting docker
-
+systemctl start docker
 echo running the rest of the startup stuff
 
 
