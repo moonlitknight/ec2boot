@@ -38,6 +38,7 @@ echo starting docker
 systemctl start docker
 echo running the rest of the startup stuff
 at now + 1 minutes << EOF
+ PATH=$PATH:/bin:/usr/bin:/sbin:/usr/sbin
  systemctl restart docker
  /shared/scripts/d_nagios
  /shared/scripts/d_nginx
