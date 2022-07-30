@@ -25,7 +25,7 @@ then
 else
         hostname ec2d
 fi
-#systemctl stop docker           # we don't want docker running until shared is mounted
+killall dockerd           # we don't want docker running until shared is mounted
 if [ ! -d /shared/jails ]       # if shared not mounted, wait to give me time to attach the volume, then rerun
 then
         sleep 2
