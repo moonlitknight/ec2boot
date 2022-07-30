@@ -37,6 +37,11 @@ fi
 echo starting docker
 systemctl start docker
 echo running the rest of the startup stuff
+at now + 1 minutes << EOF
+ systemctl restart docker
+ /shared/scripts/d_nagios
+ /shared/scripts/d_nginx
+EOF
 
 
 
