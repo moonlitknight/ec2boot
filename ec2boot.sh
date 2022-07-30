@@ -43,6 +43,6 @@ at now + 1 minutes << EOF
  /shared/scripts/d_nagios
  /shared/scripts/d_nginx
 EOF
-
+atq
 
 
